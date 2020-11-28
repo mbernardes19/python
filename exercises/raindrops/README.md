@@ -1,63 +1,56 @@
-# Raindrops
+# Gotas de chuva
 
-Your task is to convert a number into a string that contains raindrop sounds corresponding to certain potential factors. A factor is a number that evenly divides into another number, leaving no remainder. The simplest way to test if a one number is a factor of another is to use the [modulo operation](https://en.wikipedia.org/wiki/Modulo_operation).
+Sua tarefa é converter um número em uma string que contenha sons de gotas de chuva de acordo com sua divisbilidade. Um número é divisível por outro quando na divisão não sobre resto. A forma mais simples de testar se um número é divisível por outro, é usando a [operação módulo](https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_m%C3%B3dulo).
 
-The rules of `raindrops` are that if a given number:
+As regras de `gotas de chuva` são que se um número:
 
-- has 3 as a factor, add 'Pling' to the result.
-- has 5 as a factor, add 'Plang' to the result.
-- has 7 as a factor, add 'Plong' to the result.
-- _does not_ have any of 3, 5, or 7 as a factor, the result should be the digits of the number.
+- for divisível por 3, adicione 'Pling' ao resultado.
+- for divisível por 5, adicione 'Plang' ao resultado.
+- for divisível por 7, adicione 'Plong' ao resultado.
+- _não for_ divisível por 3, 5 nem 7, o resultado será os dígitos do número.
 
-## Examples
+## Exemplos
 
-- 28 has 7 as a factor, but not 3 or 5, so the result would be "Plong".
-- 30 has both 3 and 5 as factors, but not 7, so the result would be "PlingPlang".
-- 34 is not factored by 3, 5, or 7, so the result would be "34".
+- 28 é divisível por 7, mas não por 3 ou 5, então o resultado será "Plong".
+- 30 é divisível por 3 e por 5, mas não por 7, então o resultado será "PlingPlang".
+- 34 não é divisível por 3, por 5 e nem por 7, então o resultado será "34".
 
+## Mensagens de Exceção
 
-## Exception messages
+Às vezes pode ser necessário levantar uma exceção. Quando você fizer isso, inclua uma mensagem de erro explicativa para indicar qual é a causa do erro. Isso faz o seu código ficar mais legível e ajuda muito na hora de debugar. Nem todos os exercícios vão exigir que você levante uma exceção, mas para aqueles que precise, os testes só vão passar se você incluir uma mensagem.
 
-Sometimes it is necessary to raise an exception. When you do this, you should include a meaningful error message to
-indicate what the source of the error is. This makes your code more readable and helps significantly with debugging. Not
-every exercise will require you to raise an exception, but for those that do, the tests will only pass if you include
-a message.
-
-To raise a message with an exception, just write it as an argument to the exception type. For example, instead of
-`raise Exception`, you should write:
+Para levantar uma mensagem com uma exceção, escreva-a como um argumento para o tipo de exceção. Por exemplo, ao invés de `raise Exception`, você deve escrever:
 
 ```python
-raise Exception("Meaningful message indicating the source of the error")
+raise Exception("Mensagem explicativa que indica a causa do erro")
 ```
 
-## Running the tests
+## Rodando os testes
 
-To run the tests, run `pytest raindrops_test.py`
+Para rodar os testes, execute `pytest two_fer_test.py`
 
-Alternatively, you can tell Python to run the pytest module:
-`python -m pytest raindrops_test.py`
+Você também pode executer o pytest module: `python -m pytest raindrops_test.py`
 
-### Common `pytest` options
+### Opções comuns de `pytest`
 
-- `-v` : enable verbose output
-- `-x` : stop running tests on first failure
-- `--ff` : run failures from previous test before running other test cases
+- `-v` : habilitar output verboso
+- `-x` : parar de rodar testes depois da primeira falha
+- `--ff` : rodar falhas do teste anterior antes de rodar outro teste
 
-For other options, see `python -m pytest -h`
+Para outras opções, veja `python -m pytest -h`
 
-## Submitting Exercises
+## Enviando Exercícios
 
-Note that, when trying to submit an exercise, make sure the solution is in the `$EXERCISM_WORKSPACE/python/raindrops` directory.
+Quando for tentar enviar um exercício, tenha certeza de que a solução está no diretório `$EXERCISM_WORKSPACE/python/raindrops`.
 
-You can find your Exercism workspace by running `exercism debug` and looking for the line that starts with `Workspace`.
+Você pode saber qual é o seu workspace do Exercism rodando `exercism debug` e olhando para a linha que começa com `Workspace`.
 
-For more detailed information about running tests, code style and linting,
-please see [Running the Tests](http://exercism.io/tracks/python/tests).
+Para informações mais detalhadas sobre como rodar os testes, o code style e linting, por favor veja [Rodando os Testes](http://exercism.io/tracks/python/tests).
 
-## Source
+## Fonte
 
-A variation on FizzBuzz, a famous technical interview question that is intended to weed out potential candidates. That question is itself derived from Fizz Buzz, a popular children's game for teaching division. [https://en.wikipedia.org/wiki/Fizz_buzz](https://en.wikipedia.org/wiki/Fizz_buzz)
+Uma variação de FizzBuzz, uma famosa pergunta de entrevista técnica feita para remover candidatos. A pergunta em si é derivada de FizzBuzz, um jogo de criança famoso que ensina divisão. [https://en.wikipedia.org/wiki/Fizz_buzz](https://en.wikipedia.org/wiki/Fizz_buzz)
 
-## Submitting Incomplete Solutions
+## Enviando Soluções Incompletas
 
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+É possível enviar uma solução incompleta para que você possa ver como os outros fizeram o exercício.

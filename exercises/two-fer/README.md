@@ -1,72 +1,64 @@
-# Two Fer
+# Um pra você, um pra mim
 
-`Two-fer` or `2-fer` is short for two for one. One for you and one for me.
-
-Given a name, return a string with the message:
+Dado um nome, retorne uma string ccom a mensagem:
 
 ```text
-One for X, one for me.
+Um pra X, um pra mim.
 ```
 
-Where X is the given name.
+Onde X é um nome dado.
 
-However, if the name is missing, return the string:
+Contudo, se não tiver nome, retorne a string:
 
 ```text
-One for you, one for me.
+Um pra você, um pra mim.
 ```
 
-Here are some examples:
+Alguns exemplos:
 
-|Name    |String to return
+|Nome    |String pra retornar
 |:-------|:------------------
-|Alice   |One for Alice, one for me.
-|Bob     |One for Bob, one for me.
-|        |One for you, one for me.
-|Zaphod  |One for Zaphod, one for me.
+|Alice   |Um pra Alice, um pra mim.
+|Bob     |Um pra Bob, um pra mim.
+|        |Um pra você, um pra mim.
+|Zaphod  |Um pra Zaphod, um pra mim.
 
-## Exception messages
+## Mensagens de Exceção
 
-Sometimes it is necessary to raise an exception. When you do this, you should include a meaningful error message to
-indicate what the source of the error is. This makes your code more readable and helps significantly with debugging. Not
-every exercise will require you to raise an exception, but for those that do, the tests will only pass if you include
-a message.
+Às vezes pode ser necessário levantar uma exceção. Quando você fizer isso, inclua uma mensagem de erro explicativa para indicar qual é a causa do erro. Isso faz o seu código ficar mais legível e ajuda muito na hora de debugar. Nem todos os exercícios vão exigir que você levante uma exceção, mas para aqueles que precise, os testes só vão passar se você incluir uma mensagem.
 
-To raise a message with an exception, just write it as an argument to the exception type. For example, instead of
-`raise Exception`, you should write:
+Para levantar uma mensagem com uma exceção, escreva-a como um argumento para o tipo de exceção. Por exemplo, ao invés de `raise Exception`, você deve escrever:
 
 ```python
-raise Exception("Meaningful message indicating the source of the error")
+raise Exception("Mensagem explicativa que indica a causa do erro")
 ```
 
-## Running the tests
+## Rodando os testes
 
-To run the tests, run `pytest two_fer_test.py`
+Para rodar os testes, execute `pytest two_fer_test.py`
 
-Alternatively, you can tell Python to run the pytest module:
-`python -m pytest two_fer_test.py`
+Você também pode executer o pytest module: `python -m pytest two_fer_test.py`
 
-### Common `pytest` options
+### Opções comuns de `pytest`
 
-- `-v` : enable verbose output
-- `-x` : stop running tests on first failure
-- `--ff` : run failures from previous test before running other test cases
+- `-v` : habilitar output verboso
+- `-x` : parar de rodar testes depois da primeira falha
+- `--ff` : rodar falhas do teste anterior antes de rodar outro teste
 
-For other options, see `python -m pytest -h`
+Para outras opções, veja `python -m pytest -h`
 
-## Submitting Exercises
+## Enviando Exercícios
 
-Note that, when trying to submit an exercise, make sure the solution is in the `$EXERCISM_WORKSPACE/python/two-fer` directory.
+Quando for tentar enviar um exercício, tenha certeza de que a solução está no diretório `$EXERCISM_WORKSPACE/python/two-fer`.
 
-You can find your Exercism workspace by running `exercism debug` and looking for the line that starts with `Workspace`.
+Você pode saber qual é o seu workspace do Exercism rodando `exercism debug` e olhando para a linha que começa com `Workspace`.
 
-For more detailed information about running tests, code style and linting,
-please see [Running the Tests](http://exercism.io/tracks/python/tests).
+Para informações mais detalhadas sobre como rodar os testes, o code style e linting, por favor veja [Rodando os Testes](http://exercism.io/tracks/python/tests).
 
-## Source
+## Fonte
 
 [https://github.com/exercism/problem-specifications/issues/757](https://github.com/exercism/problem-specifications/issues/757)
 
-## Submitting Incomplete Solutions
+## Enviando Soluções Incompletas
 
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+É possível enviar uma solução incompleta para que você possa ver como os outros fizeram o exercício.

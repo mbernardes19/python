@@ -1,58 +1,51 @@
-# High Scores
+# Pontuações
 
-Manage a game player's High Score list.
+Administre a lista de pontuações de um jogador de um jogo.
 
-Your task is to build a high-score component of the classic Frogger game, one of the highest selling and addictive games of all time, and a classic of the arcade era. Your task is to write methods that return the highest score from the list, the last added score and the three highest scores.
+Sua tarefa é fazer um componente de pontuações do jogo clássico Frogger, um dos mais vendidos e viciantes jogos de todos os tempos, e um clássico da era dos fliperamas. Sua tarefa é escrever métodos que retornem a pontuação mais alta da lista, a última pontuação adicionada e as três pontuações mais altas.
 
-In this exercise, you're going to use and manipulate lists. Python lists are very versatile, and you'll find yourself using them again and again in problems both simple and complex.
+Neste exercício, você vai ter que usar e manipular listas. Listas em Python são muito versáteis, e você vai usá-las muito em problemas tanto simples quanto complexos.
 
-- [**Data Structures (Python 3 Documentation Tutorial)**](https://docs.python.org/3/tutorial/datastructures.html)
-- [**Lists and Tuples in Python (Real Python)**](https://realpython.com/python-lists-tuples/)
-- [**Python Lists (Google for Education)**](https://developers.google.com/edu/python/lists)
+- [**Estrutura de Dados (Python 3 Documentation Tutorial)**](https://docs.python.org/3/tutorial/datastructures.html)
+- [**Lista e Tuplas em Python (Real Python)**](https://realpython.com/python-lists-tuples/)
+- [**Listas em Python (Google for Education)**](https://developers.google.com/edu/python/lists)
 
+## Mensagens de Exceção
 
-## Exception messages
+Às vezes pode ser necessário levantar uma exceção. Quando você fizer isso, inclua uma mensagem de erro explicativa para indicar qual é a causa do erro. Isso faz o seu código ficar mais legível e ajuda muito na hora de debugar. Nem todos os exercícios vão exigir que você levante uma exceção, mas para aqueles que precise, os testes só vão passar se você incluir uma mensagem.
 
-Sometimes it is necessary to raise an exception. When you do this, you should include a meaningful error message to
-indicate what the source of the error is. This makes your code more readable and helps significantly with debugging. Not
-every exercise will require you to raise an exception, but for those that do, the tests will only pass if you include
-a message.
-
-To raise a message with an exception, just write it as an argument to the exception type. For example, instead of
-`raise Exception`, you should write:
+Para levantar uma mensagem com uma exceção, escreva-a como um argumento para o tipo de exceção. Por exemplo, ao invés de `raise Exception`, você deve escrever:
 
 ```python
-raise Exception("Meaningful message indicating the source of the error")
+raise Exception("Mensagem explicativa que indica a causa do erro")
 ```
 
-## Running the tests
+## Rodando os testes
 
-To run the tests, run `pytest high_scores_test.py`
+Para rodar os testes, execute `pytest high_scores_test.py`
 
-Alternatively, you can tell Python to run the pytest module:
-`python -m pytest high_scores_test.py`
+Você também pode executer o pytest module: `python -m pytest high_scores_test.py`
 
-### Common `pytest` options
+### Opções comuns de `pytest`
 
-- `-v` : enable verbose output
-- `-x` : stop running tests on first failure
-- `--ff` : run failures from previous test before running other test cases
+- `-v` : habilitar output verboso
+- `-x` : parar de rodar testes depois da primeira falha
+- `--ff` : rodar falhas do teste anterior antes de rodar outro teste
 
-For other options, see `python -m pytest -h`
+Para outras opções, veja `python -m pytest -h`
 
-## Submitting Exercises
+## Enviando Exercícios
 
-Note that, when trying to submit an exercise, make sure the solution is in the `$EXERCISM_WORKSPACE/python/high-scores` directory.
+Quando for tentar enviar um exercício, tenha certeza de que a solução está no diretório `$EXERCISM_WORKSPACE/python/high-scores`.
 
-You can find your Exercism workspace by running `exercism debug` and looking for the line that starts with `Workspace`.
+Você pode saber qual é o seu workspace do Exercism rodando `exercism debug` e olhando para a linha que começa com `Workspace`.
 
-For more detailed information about running tests, code style and linting,
-please see [Running the Tests](http://exercism.io/tracks/python/tests).
+Para informações mais detalhadas sobre como rodar os testes, o code style e linting, por favor veja [Rodando os Testes](http://exercism.io/tracks/python/tests).
 
-## Source
+## Fonte
 
-Tribute to the eighties' arcade game Frogger
+Tributo ao jogo de arcade dos anos 80 Frogger
 
-## Submitting Incomplete Solutions
+## Enviando Soluções Incompletas
 
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+É possível enviar uma solução incompleta para que você possa ver como os outros fizeram o exercício.
